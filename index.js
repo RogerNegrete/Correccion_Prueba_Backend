@@ -6,7 +6,8 @@ import { clientes } from './datos/persona.js';
 const app = express();
 const PORT = process.env.PORT || 3001; // Cambia a 3001 u otro puerto disponible
 
-app.use(cors());
+// Configuración explícita de CORS
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 // Array para almacenar items en memoria
