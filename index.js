@@ -7,7 +7,9 @@ const app = express();
 const PORT = process.env.PORT || 3001; // Cambia a 3001 u otro puerto disponible
 
 // Configuración explícita de CORS
-app.use(cors({ origin: '*' }));
+app.use(cors({
+  origin: 'https://correccion-prueba-frontend.vercel.app'
+}));
 app.use(express.json());
 
 // Array para almacenar items en memoria
